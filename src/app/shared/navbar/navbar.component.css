@@ -1,0 +1,26 @@
+.logIn {
+    display: flex;
+    padding-right: 5em;
+    margin-top: -3em;
+    justify-content: end;
+}
+
+.menu {
+    border-top: 1px solid rgb(69, 69, 69);
+    border-bottom: 1px solid rgb(69, 69, 69);
+    
+}
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.menu ul li {
+    text-decoration: none;
+    border-left: 1px solid rgb(69, 69, 69);
+    border-right: 1px solid rgb(69, 69, 69);
+    padding: 1em 2em;
+    list-style: none;
+    cursor: pointer;
+}
