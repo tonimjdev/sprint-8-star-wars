@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { StarshipsService } from '../services/starships.service';
 
 @Component({
@@ -8,8 +8,17 @@ import { StarshipsService } from '../services/starships.service';
 })
 export class StarshipsComponent implements OnInit {
 
+  
+
   get resultados() {
     return this.starshipsService.resultados;
+  }
+
+  
+
+  llamarNave(id:number) {
+    console.log('La nave llamada es: ', id);
+    this.starshipsService.llamarFicha(id);
   }
 
   constructor( private starshipsService: StarshipsService) { }

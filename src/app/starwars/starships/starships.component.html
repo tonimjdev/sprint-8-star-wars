@@ -1,8 +1,10 @@
 <div class="container mt-4">
 
     <div class="row d-flex justify-content-center mb-3">
-        <div *ngFor="let nave of resultados" class="col-7"> 
-            <div class="card">
+        <div *ngFor="let nave of resultados; let i = index" class="col-7"> 
+            <div class="card"
+                (click)="llamarNave(i)"
+                style="cursor: pointer">
                 <div class="card-body bg-dark">
                     <p class="card-text">
                         {{ nave.name }}  
