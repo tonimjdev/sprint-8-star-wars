@@ -1,62 +1,19 @@
-
 <div class="container mt-4">
-<!-- Pag 1-->
-<div class="row d-flex justify-content-center">
-  <div *ngFor="let nave of resultados; let i = index" class="card-group col-7">
-    <div class="card" (click)="llamarNave(i, 1)" style="cursor: pointer">
-      <div class="card-body bg-dark">
-        <p class="card-text">
-          {{ nave.name }}
-        </p>
-        <p>
-          {{ nave.model }}
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
 
-  <!-- Pag 2 -->
-
-  <div *ngIf="resultados2" class="row d-flex justify-content-center">
-    <div
-      *ngFor="let nave of resultados2; let i = index"
-      class="card-group col-7"
-    >
-      <div class="card" (click)="llamarNave(i, 2)" style="cursor: pointer">
-        <div class="card-body bg-dark">
-          <p class="card-text">
-            {{ nave.name }}
-          </p>
-          <p>
-            {{ nave.model }}
-          </p>
+    <div class="row d-flex justify-content-center mb-3">
+        <div *ngFor="let nave of resultados; let i = index" class="col-7"> 
+            <div class="card"
+                (click)="llamarNave(i)"
+                style="cursor: pointer">
+                <div class="card-body bg-dark">
+                    <p class="card-text">
+                        {{ nave.name }}  
+                    </p>
+                    <p>
+                        {{ nave.model }}
+                    </p>
+                </div>
+            </div>
+            <br>
         </div>
-      </div>
     </div>
-  </div>
-
-  <!-- Pag 3 -->
-
-  <div *ngIf="resultados3" class="row d-flex justify-content-center">
-    <div
-      *ngFor="let nave of resultados3; let i = index"
-      class="card-group col-7"
-    >
-      <div class="card" (click)="llamarNave(i, 3)" style="cursor: pointer">
-        <div class="card-body bg-dark">
-          <p class="card-text">
-            {{ nave.name }}
-          </p>
-          <p>
-            {{ nave.model }}
-          </p>
-        </div>
-      </div>
-    </div>
-
-  <button *ngIf="resultados3.length < 1" (click)="cargarMasNaves()" class="btn text-light mt-4">
-    View More
-  </button>
-</div>
-</div>
