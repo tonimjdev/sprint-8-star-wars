@@ -1,15 +1,15 @@
-
+// [routerLink] = "['/starships/', nave | id]"
 <div class="container mt-4">
     <!-- Pag 1-->
     <div class="row d-flex justify-content-center">
-      <div *ngFor="let nave of resultados; let i = index" class="card-group col-7">
+      <div class="card-group col-7" *ngFor="let nave of resultados; let i = index">
         <div class="card" (click)="llamarNave(i, 1)" style="cursor: pointer">
           <div class="card-body bg-dark">
+            <h5 class="card-title">
+              {{ nave.name | uppercase}}
+            </h5>
             <p class="card-text">
-              {{ nave.name }}
-            </p>
-            <p>
-              {{ nave.model }}
+              {{ nave.model | titlecase }}
             </p>
           </div>
         </div>
@@ -25,11 +25,11 @@
         >
           <div class="card" (click)="llamarNave(i, 2)" style="cursor: pointer">
             <div class="card-body bg-dark">
+              <h5 class="card-title">
+                {{ nave.name | uppercase}}
+              </h5>
               <p class="card-text">
-                {{ nave.name }}
-              </p>
-              <p>
-                {{ nave.model }}
+                {{ nave.model | titlecase }}
               </p>
             </div>
           </div>
@@ -45,11 +45,11 @@
         >
           <div class="card" (click)="llamarNave(i, 3)" style="cursor: pointer">
             <div class="card-body bg-dark">
+              <h5 class="card-title">
+                {{ nave.name | uppercase}}
+              </h5>
               <p class="card-text">
-                {{ nave.name }}
-              </p>
-              <p>
-                {{ nave.model }}
+                {{ nave.model | titlecase }}
               </p>
             </div>
           </div>

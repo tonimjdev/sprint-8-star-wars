@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StarshipsService } from '../services/starships.service';
 
 @Component({
@@ -7,6 +7,9 @@ import { StarshipsService } from '../services/starships.service';
   styleUrls: ['./starships.component.css'],
 })
 export class StarshipsComponent implements OnInit {
+
+  public naveLlamada:any;
+
   get resultados() {
     return this.starshipsService.resultados;
   }
@@ -19,7 +22,8 @@ export class StarshipsComponent implements OnInit {
 
   llamarNave(index: number, arrayNaves: number) {
     console.log('El index de la nave llamada es: ', index);
-    this.starshipsService.llamarFicha(index, arrayNaves);
+    this.naveLlamada = this.starshipsService.llamarFicha(index, arrayNaves);
+    console.log('Nave llamada: ', this.naveLlamada);
   }
 
   cargarMasNaves() {

@@ -46,6 +46,7 @@ export class StarshipsService {
     //Obtención id nave a través del parámetro url del objeto
     this.idNave = this.naveLlamada.url.replace(/[^0-9]+/g, '');
     console.log('ID nave llamada: ', this.idNave);
+    return this.naveLlamada;
   }
 
 }
