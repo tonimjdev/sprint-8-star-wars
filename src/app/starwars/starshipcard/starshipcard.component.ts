@@ -12,14 +12,16 @@ export class StarshipcardComponent implements OnInit {
     return this.starshipsService.naveLlamada;
   }
   get idNave() {
-    return this.starshipsService.indexNave;
+    return this.starshipsService.idNave;
   }
 
   public urlImg: string = 'https://starwars-visualguide.com/assets/img/starships/';
+  
+
 
   constructor( private starshipsService: StarshipsService ) { }
 
   ngOnInit(): void {
   }
- 
+
 }
