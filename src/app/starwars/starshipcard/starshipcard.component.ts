@@ -17,8 +17,6 @@ export class StarshipcardComponent implements OnInit {
 
   public urlImg: string = 'https://starwars-visualguide.com/assets/img/starships/';
   
-
-
   constructor( private starshipsService: StarshipsService ) { }
 
   ngOnInit(): void {
