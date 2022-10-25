@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { StarshipsComponent } from './starships/starships.component';
 import { StarshipcardComponent } from './starshipcard/starshipcard.component';
 import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,7 +14,8 @@ import { HomeComponent } from './home/home.component';
     HomeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     StarshipsComponent,

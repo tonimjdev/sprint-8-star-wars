@@ -1,10 +1,11 @@
-// [routerLink] = "['/starships/', nave | id]"
-<div class="container mt-4">
+<!-- [routerLink] = "['/starships/', nave | id]" -->
+<div class="container mt-4 d-flex justify-content-center">
+
     <!-- Pag 1-->
-    <div class="row d-flex justify-content-center">
-      <div class="card-group col-7" *ngFor="let nave of resultados; let i = index">
-        <div class="card" (click)="llamarNave(i, 1)" style="cursor: pointer">
-          <div class="card-body bg-dark">
+    <div class="row">
+      <div class="col-12" *ngFor="let nave of resultados; let i = index">
+        <div class="card mb-3" (click)="llamarNave(i, 1)" style="cursor: pointer">
+          <div class="card-body py-4 ps-4">
             <h5 class="card-title">
               {{ nave.name | uppercase}}
             </h5>
@@ -14,17 +15,18 @@
           </div>
         </div>
       </div>
-    </div>
+    
     
       <!-- Pag 2 -->
     
-      <div *ngIf="resultados2" class="row d-flex justify-content-center">
+      <div *ngIf="resultados2">
+        <div class="row">
         <div
           *ngFor="let nave of resultados2; let i = index"
-          class="card-group col-7"
+          class="col-12"
         >
-          <div class="card" (click)="llamarNave(i, 2)" style="cursor: pointer">
-            <div class="card-body bg-dark">
+          <div class="card mb-3" (click)="llamarNave(i, 2)" style="cursor: pointer">
+            <div class="card-body py-4 ps-4">
               <h5 class="card-title">
                 {{ nave.name | uppercase}}
               </h5>
@@ -35,16 +37,21 @@
           </div>
         </div>
       </div>
+      </div>
+      <button *ngIf="resultados3.length < 1" (click)="cargarMasNaves()" class="btn text-light">
+        View More
+      </button>
     
       <!-- Pag 3 -->
     
-      <div *ngIf="resultados3" class="row d-flex justify-content-center">
+      <div *ngIf="resultados3">
+        <div class="row">
         <div
           *ngFor="let nave of resultados3; let i = index"
-          class="card-group col-7"
+          class="col-12"
         >
-          <div class="card" (click)="llamarNave(i, 3)" style="cursor: pointer">
-            <div class="card-body bg-dark">
+          <div class="card mb-3" (click)="llamarNave(i, 3)" style="cursor: pointer">
+            <div class="card-body py-4 ps-4">
               <h5 class="card-title">
                 {{ nave.name | uppercase}}
               </h5>
@@ -54,9 +61,7 @@
             </div>
           </div>
         </div>
-    
-      <button *ngIf="resultados3.length < 1" (click)="cargarMasNaves()" class="btn text-light mt-4">
-        View More
-      </button>
+        </div>
     </div>
     </div>
+  </div>

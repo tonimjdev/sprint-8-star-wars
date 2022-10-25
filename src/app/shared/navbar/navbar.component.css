@@ -23,4 +23,16 @@
     padding: 1em 2em;
     list-style: none;
     cursor: pointer;
+    color:rgb(104, 104, 104)
 }
+
+
+ul li.active {
+    border-bottom: 1px solid white;
+    color: white!important;
+}
+li:focus, li:hover, li:active{
+    color: white!important;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+  }

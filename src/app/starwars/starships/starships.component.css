@@ -1,0 +1,8 @@
+.card {
+    border: none;
+    background-color: rgb(29, 29, 29);
+    color:rgb(163, 163, 163);
+    font-weight: 300;
+    max-width: 600px;
+    margin: auto;
+}
