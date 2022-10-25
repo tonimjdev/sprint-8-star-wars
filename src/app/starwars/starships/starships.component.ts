@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StarshipsService } from '../services/starships.service';
 
+
 @Component({
   selector: 'app-starships',
   templateUrl: './starships.component.html',
@@ -10,6 +11,11 @@ export class StarshipsComponent implements OnInit {
 
   public naveLlamada:any;
 
+  // variables para el scroll
+  public finishPage:number = 3;
+  public actualPage: number;
+
+  // Getters
   get resultados() {
     return this.starshipsService.resultados;
   }
@@ -28,10 +34,27 @@ export class StarshipsComponent implements OnInit {
 
   cargarMasNaves() {
     this.starshipsService.buscarNaves();
-
   }
 
-  constructor(private starshipsService: StarshipsService) {}
+  // Método para implementar el infinite scroll segun total páginas a cargar
+  onScroll() {
+    if (this.actualPage < this.finishPage) {
+      this.cargarMasNaves();
+      this.actualPage ++;
+    } else {
+      console.log('No more lines. Finish page!');
+    }
+  }
 
-  ngOnInit(): void {}
+  constructor(private starshipsService: StarshipsService) {
+    // Inicializamos en 1 cada vez que entramos
+    this.actualPage = 1;
+  }
+
+  ngOnInit(): void {
+    // Reseteamos naves al iniciar
+    this.starshipsService.borrarNaves();
+    // Cargamos naves
+    this.cargarMasNaves();
+  }
 }

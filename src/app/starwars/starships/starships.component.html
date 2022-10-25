@@ -1,10 +1,12 @@
-<!-- [routerLink] = "['/starships/', nave | id]" -->
-<div class="container mt-4 d-flex justify-content-center">
+<!-- [routerLink]="['/starships/', nave | id]" -->
+<div class="container mt-4 d-flex justify-content-center"
+infiniteScroll [infiniteScrollDistance]="2"  (scrolled)="onScroll()">
 
     <!-- Pag 1-->
     <div class="row">
       <div class="col-12" *ngFor="let nave of resultados; let i = index">
-        <div class="card mb-3" (click)="llamarNave(i, 1)" style="cursor: pointer">
+        <div class="card mb-3" (click)="llamarNave(i, 1)" style="cursor: pointer"
+        [routerLink]="['/starships/',resultados[i].name]">
           <div class="card-body py-4 ps-4">
             <h5 class="card-title">
               {{ nave.name | uppercase}}
@@ -16,16 +18,15 @@
         </div>
       </div>
     
-    
       <!-- Pag 2 -->
-    
       <div *ngIf="resultados2">
         <div class="row">
         <div
           *ngFor="let nave of resultados2; let i = index"
           class="col-12"
         >
-          <div class="card mb-3" (click)="llamarNave(i, 2)" style="cursor: pointer">
+          <div class="card mb-3" (click)="llamarNave(i, 2)" style="cursor: pointer"
+          [routerLink]="['/starships/',resultados2[i].name]">
             <div class="card-body py-4 ps-4">
               <h5 class="card-title">
                 {{ nave.name | uppercase}}
@@ -38,19 +39,16 @@
         </div>
       </div>
       </div>
-      <button *ngIf="resultados3.length < 1" (click)="cargarMasNaves()" class="btn text-light">
-        View More
-      </button>
     
       <!-- Pag 3 -->
-    
       <div *ngIf="resultados3">
         <div class="row">
         <div
           *ngFor="let nave of resultados3; let i = index"
           class="col-12"
         >
-          <div class="card mb-3" (click)="llamarNave(i, 3)" style="cursor: pointer">
+          <div class="card mb-3" (click)="llamarNave(i, 3)" style="cursor: pointer"
+          [routerLink]="['/starships/',resultados3[i].name]">
             <div class="card-body py-4 ps-4">
               <h5 class="card-title">
                 {{ nave.name | uppercase}}

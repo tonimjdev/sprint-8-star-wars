@@ -1,26 +1,36 @@
-<div class="container mt-4 d-flex justify-content-center">
-
+<div class="container my-4 d-flex justify-content-center">
   <div class="card bg-dark text-light" style="max-width: 800px">
-  <img src="{{ urlImg }}{{ idNave }}.jpg" 
-  onerror="this.src='https://starwars-visualguide.com/assets/img/big-placeholder.jpg'" 
-  class="card-img-top img-fluid w-100" alt="Starship picture" 
-  style="border-bottom: 2px solid rgb(238, 119, 119)">
-      <div class="card-body">
-        <h5 class="card-title">{{fichaNave.name | uppercase}}</h5>
-        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum voluptatem repellat vero recusandae perspiciatis libero voluptas, fuga consectetur dolor! Ipsam minus voluptatibus nulla eius odio? Perferendis nostrum expedita sequi iste?</p>
-        <div class="row">
+    <img
+      src="{{ urlImg }}{{ idNave }}.jpg"
+      onerror="this.src='https://starwars-visualguide.com/assets/img/big-placeholder.jpg'"
+      class="card-img-top img-fluid w-100"
+      alt="Starship picture"
+      style="border-bottom: 2px solid rgb(238, 119, 119)"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ fichaNave.name | uppercase }}</h5>
+      <p class="card-text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+        voluptatem repellat vero recusandae perspiciatis libero voluptas, fuga
+        consectetur dolor! Ipsam minus voluptatibus nulla eius odio? Perferendis
+        nostrum expedita sequi iste.
+      </p>
+      <div class="row">
         <div class="col-6">
-        <p class="card-text">Model: {{fichaNave.model}} </p>
-        <p class="card-text">Cost in credits: {{fichaNave.cost_in_credits | number}} </p>
-        <p class="card-text">Atmospheric Speed: {{fichaNave.max_atmosphering_speed}} </p>
-      </div>
+          <p class="card-text">Model: {{ fichaNave.model }}</p>
+          <p class="card-text">
+            Cost in credits: {{ fichaNave.cost_in_credits }}
+          </p>
+          <p class="card-text">
+            Atmospheric Speed: {{ fichaNave.max_atmosphering_speed }}
+          </p>
+        </div>
         <div class="col-6">
-        <p class="card-text">Manufacturer: {{fichaNave.manufacturer}} </p>
-        <p class="card-text">Length: {{fichaNave.length | number}}</p>
-        <p class="card-text">Crew: {{fichaNave.crew}}</p>
-      </div>
-  </div>
+          <p class="card-text">Manufacturer: {{ fichaNave.manufacturer }}</p>
+          <p class="card-text">Length: {{ fichaNave.length | number }}</p>
+          <p class="card-text">Crew: {{ fichaNave.crew }}</p>
+        </div>
       </div>
     </div>
+  </div>
 </div>
-

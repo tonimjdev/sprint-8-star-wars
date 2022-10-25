@@ -37,6 +37,7 @@ export class StarshipsService {
 
       });
   }
+  
   // Obtener la ID de la nave
   llamarFicha(index: number, arrayNaves: number) {
     if (arrayNaves===2) this.naveLlamada = this.resultados2[index];
@@ -47,6 +48,14 @@ export class StarshipsService {
     this.idNave = this.naveLlamada.url.replace(/[^0-9]+/g, '');
     console.log('ID nave llamada: ', this.idNave);
     return this.naveLlamada;
+  }
+
+  // Reset naves
+  borrarNaves() {
+    this.resultados = [];
+    this.resultados2 = [];
+    this.resultados3 = [];
+    this.page = 1;
   }
 
 }
