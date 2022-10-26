@@ -1,10 +1,31 @@
-.logIn {
-    display: flex;
-    padding-right: 5em;
-    margin-top: -3em;
-    justify-content: end;
+span {
+    color: #000;
+    font-size: 0.7em;
+    font-weight: 800;
+    margin-top: 0.42em;
+    margin-bottom: auto;
+    padding: 0 0.4em;
+    border-radius: 10px;
+    background-color:rgb(148, 148, 148);
 }
 
+span:hover {
+    cursor: pointer;
+    background-color: white;
+}
+.rrss {
+    margin-bottom: auto;
+    border-right: 1px solid rgb(111, 111, 111);
+    margin-right: 0.8em;
+}
+
+.rrss svg {
+    margin-right: 1em;
+}
+.rrss svg:hover {
+    cursor: pointer;
+    color: white!important;
+}
 .menu {
     border-top: 1px solid rgb(69, 69, 69);
     border-bottom: 1px solid rgb(69, 69, 69);
@@ -23,7 +44,7 @@
     padding: 1em 2em;
     list-style: none;
     cursor: pointer;
-    color:rgb(104, 104, 104)
+    color:rgb(104, 104, 104);
 }
 
 
