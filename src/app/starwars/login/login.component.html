@@ -1,18 +1,48 @@
-
-  <ng-template #contenido let-loginModal>
-
-        <div class="modal-content bg-dark">
-   <div class="modal-header">Título modal</div>
-    <div class="modal-body">
-        Este es el cuerpo del modal.
+<ng-template #contenido let-loginModal class="modal">
+  <div class="modal-content bg-dark border-dark">
+    <div class="modal-header" style="border:none;">
+      <button
+        type="button"
+        class="btn-close btn-close-white align-self-end close"
+        aria-label="Close"
+        (click)="loginModal.dismiss()"
+      ></button>
     </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-success" (click)="loginModal.dismiss()">Ok!</button>
+    <div class="modal-body" style="border:none;">
+      <div class="d-flex justify-content-center align-items-center g-5 pb-3">
+        <img
+          src="../../../assets/disney_white.png"
+          style="width: 100px"
+          alt="Disney logo"
+          class="me-2"
+        />
+        <span style="color: #fff" class="me-5"> account</span>
+        <img
+          src="../../../assets/starwars_login.png"
+          style="width: 125px"
+          alt="Star Wars logo"
+        />
+      </div>
     </div>
-</div>
+
+    <div class="modal-body text-center fs-5" style="color:rgb(255, 221, 0);">ENTER YOUR EMAIL</div>
+        <input type="email" class="modal-body d-flex flex-row justify-content-center mx-5 p-2">
+    <div class="modal-body text-center fs-5" style="color:rgb(255, 221, 0);">ENTER YOUR PASSWORD</div>
+        <input type="password" class="modal-body d-flex flex-row justify-content-center mx-5 p-2">
 
 
-    </ng-template>
 
-    <p type="button" (click)="loginModal.open(contenido)">Log in</p>
 
+    <div class="modal-footer d-flex flex-row justify-content-center" style="border:none;">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        (click)="loginModal.dismiss()"
+      >
+        Login
+      </button>
+    </div>
+  </div>
+</ng-template>
+
+<p type="button" (click)="loginModal.open(contenido)">Log in</p>
