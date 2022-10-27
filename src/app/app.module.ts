@@ -19,7 +19,7 @@ import { StarwarsModule } from './starwars/starwars.module';
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
-    StarwarsModule
+    StarwarsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

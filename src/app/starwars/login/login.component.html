@@ -1,0 +1,18 @@
+
+  <ng-template #contenido let-loginModal>
+
+        <div class="modal-content bg-dark">
+   <div class="modal-header">Título modal</div>
+    <div class="modal-body">
+        Este es el cuerpo del modal.
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="loginModal.dismiss()">Ok!</button>
+    </div>
+</div>
+
+
+    </ng-template>
+
+    <p type="button" (click)="loginModal.open(contenido)">Log in</p>
+

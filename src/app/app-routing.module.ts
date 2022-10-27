@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './starwars/home/home.component';
 import { StarshipcardComponent } from './starwars/starshipcard/starshipcard.component';
 import { StarshipsComponent } from './starwars/starships/starships.component';
-
+import { LoginComponent } from "./starwars/login/login.component";
 
 const routes: Routes = [
     {
@@ -18,6 +18,10 @@ const routes: Routes = [
     {
         path: 'starships/:id',
         component: StarshipcardComponent
+    },
+    {
+        path: 'login',
+        component: LoginComponent
     },
     {
         path: '**',

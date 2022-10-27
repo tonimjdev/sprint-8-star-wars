@@ -5,12 +5,14 @@ import { StarshipcardComponent } from './starshipcard/starshipcard.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     StarshipsComponent,
     StarshipcardComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     StarshipsComponent,
     StarshipcardComponent,
     HomeComponent,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    LoginComponent
   ]
 })
 export class StarwarsModule { }
