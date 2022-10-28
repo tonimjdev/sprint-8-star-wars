@@ -57,3 +57,8 @@ li:focus, li:hover, li:active{
     text-decoration: none;
     border-bottom: 1px solid white;
   }
+.usuario {
+    margin-top: -1.5em;
+    margin-left: 2em;
+
+}

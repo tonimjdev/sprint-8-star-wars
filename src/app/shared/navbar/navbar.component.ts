@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StarshipsService } from '../../starwars/services/starships.service';
+import { UsersService } from '../../starwars/services/users.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,11 @@ import { StarshipsService } from '../../starwars/services/starships.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor( private starshipsService: StarshipsService) { }
+  get userLogged() {
+   return this.usersService.loggedUser;
+  }
+  constructor( private starshipsService: StarshipsService,
+                private usersService: UsersService) { }
 
   ngOnInit(): void {
   }
@@ -16,4 +21,5 @@ export class NavbarComponent implements OnInit {
     console.log('Antes Servicio')
     this.starshipsService.buscarNaves();
   }
+
 }

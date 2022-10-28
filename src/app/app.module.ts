@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { StarwarsModule } from './starwars/starwars.module';
 
+import { UsersService } from './starwars/services/users.service';
+
 
 
 @NgModule({
@@ -21,7 +23,7 @@ import { StarwarsModule } from './starwars/starwars.module';
     SharedModule,
     StarwarsModule,
   ],
-  providers: [],
+  providers: [ UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

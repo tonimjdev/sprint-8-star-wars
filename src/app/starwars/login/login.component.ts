@@ -5,6 +5,10 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 // Forms
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ThisReceiver } from '@angular/compiler';
+
+// Services
+import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-login',
@@ -25,9 +29,20 @@ export class LoginComponent {
     return this.loginForm.controls[campo].errors;
   }
 
-  constructor(public loginModal: NgbModal, private fb: FormBuilder) {}
+  constructor(public loginModal: NgbModal, private fb: FormBuilder,
+    private usersService: UsersService) {}
 
+  // Check Login -> Service
   submitLogin() {
-    this.submit = true;
+    this.submit = false;
+    if (
+      this.loginForm.status !== 'VALID'
+    ) {
+      this.submit = true;
+      alert('Please, check the entered data');
+    } else {
+      this.usersService.checkLogin(this.loginForm.value.emailForm, 
+        this.loginForm.value.passForm);
+    }
   }
 }
