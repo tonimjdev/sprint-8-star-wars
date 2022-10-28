@@ -1,0 +1,118 @@
+<ng-template #contenido let-signupModal>
+  <div class="bg-dark" role="document">
+    <div class="modal-content rounded-5 bg-dark border-dark">
+      <div class="modal-header" style="border: none">
+        <button
+          type="button"
+          class="btn-close btn-close-white align-self-end close"
+          aria-label="Close"
+          (click)="signupModal.dismiss()"
+        ></button>
+      </div>
+      <div class="modal-body" style="border: none">
+        <div class="d-flex justify-content-center align-items-center pb-3">
+          <img
+            src="../../../assets/disney_white.png"
+            style="width: 100px"
+            alt="Disney logo"
+            class="me-2"
+          />
+          <span style="color: #fff" class="me-5"> account</span>
+          <img
+            src="../../../assets/starwars_login.png"
+            style="width: 125px"
+            alt="Star Wars logo"
+          />
+        </div>
+      </div>
+
+      <!-- *** Reactive Form *** -->
+      <form class="form-group" [formGroup]="signupForm">
+        <label class="modal-body form-laber fs-3 yellow"
+          >CREATE YOUR ACCOUNT</label
+        >
+        <input
+          type="text"
+          class="modal-body form-control"
+          placeholder="Your Name"
+          formControlName="nameForm"
+        />
+      
+        <span class="form-text text-danger ms-5" 
+        *ngIf="esValido('nameForm') && submit">
+          * Required field, at least 3 characters
+        </span>
+        <input
+          type="email"
+          class="modal-body form-control mt-3"
+          placeholder="Email Address"
+          formControlName="emailForm"
+        />
+   
+        <span class="form-text text-danger ms-5" 
+        *ngIf="esValido('emailForm') && submit">
+          * Required field, enter a valid Email
+        </span>
+
+        <input
+          type="password"
+          class="modal-body form-control mt-3"
+          placeholder="Password"
+          formControlName="passForm"
+        />
+
+        <span class="form-text text-danger ms-5" 
+        *ngIf="esValido('passForm') && submit">
+          * Required field, at least 4 characters
+        </span>
+
+        
+        <div class="terms modal-body row pb-2">
+          <input
+            type="checkbox"
+            class="checkbox form-check-input form-control col-1"
+            formControlName="termsForm"
+          />
+          <p class="form-check-label small col-9 mt-3">
+            By creating an account, you agree to our
+            <span class="yellow">Terms of Use</span>, and acknowledge that you
+            have read our <span class="yellow">Privacy Policy</span>,
+            <span class="yellow">Cookies Policy</span> and
+            <span class="yellow">UK & EU Privacy Rights</span>.</p
+          >
+        </div>
+     
+        <span
+          class="errorTerms form-text text-danger"
+          *ngIf="esValido('termsForm') && submit"
+        >
+          * Please, accept the terms of use
+        </span>
+      </form>
+
+      <div class="modal-footer row mt-3 mx-4 px-4" style="border: none">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="submitSignup()"
+        >
+          Sign Up
+        </button>
+
+        <div class="text-center mt-4">
+          <div class="small haveAccount">
+            Already have an account?
+            <app-login
+              class="yellow"
+              (click)="signupModal.dismiss()"
+            ></app-login>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<p class="signUp" type="button" (click)="signupModal.open(contenido)">
+  SIGN UP
+</p>

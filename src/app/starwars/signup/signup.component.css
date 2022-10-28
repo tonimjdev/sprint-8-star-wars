@@ -1,0 +1,38 @@
+.signUp:hover {
+  color: #fff;
+}
+.yellow {
+  color: rgb(255, 221, 0);
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+.haveAccount {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1em;
+}
+form label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: -0.2em;
+}
+form input {
+  max-width: 410px;
+  margin: auto;
+  padding: 0.5em;
+}
+.checkbox {
+  margin: 1.2em 0.3em 0 2.5em !important;
+}
+.terms {
+  margin-bottom: -1.5em;
+}
+.errorTerms {
+  margin-left: 5.5em;
+}

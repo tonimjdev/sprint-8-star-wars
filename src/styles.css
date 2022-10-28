@@ -3,4 +3,7 @@ body {
     background-color: rgb(10,11,11);
     color: rgb(164, 164, 164);
     font-family: 'Roboto Mono', monospace;
+    background-image: url(src/assets/stars_background.jpg);
+    background-repeat: repeat-y;
+    background-attachment: fixed;
 }

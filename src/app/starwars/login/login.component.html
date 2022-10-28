@@ -1,48 +1,86 @@
-<ng-template #contenido let-loginModal class="modal">
-  <div class="modal-content bg-dark border-dark">
-    <div class="modal-header" style="border:none;">
-      <button
-        type="button"
-        class="btn-close btn-close-white align-self-end close"
-        aria-label="Close"
-        (click)="loginModal.dismiss()"
-      ></button>
-    </div>
-    <div class="modal-body" style="border:none;">
-      <div class="d-flex justify-content-center align-items-center g-5 pb-3">
-        <img
-          src="../../../assets/disney_white.png"
-          style="width: 100px"
-          alt="Disney logo"
-          class="me-2"
-        />
-        <span style="color: #fff" class="me-5"> account</span>
-        <img
-          src="../../../assets/starwars_login.png"
-          style="width: 125px"
-          alt="Star Wars logo"
-        />
+<ng-template #contenido let-loginModal>
+  <div class="bg-dark" role="document">
+    <div class="modal-content rounded-5 bg-dark border-dark">
+      <div class="modal-header" style="border: none">
+        <button
+          type="button"
+          class="btn-close btn-close-white align-self-end close"
+          aria-label="Close"
+          (click)="loginModal.dismiss()"
+        ></button>
       </div>
-    </div>
+      <div class="modal-body" style="border: none">
+        <div class="d-flex justify-content-center align-items-center pb-3">
+          <img
+            src="../../../assets/disney_white.png"
+            style="width: 100px"
+            alt="Disney logo"
+            class="me-2"
+          />
+          <span style="color: #fff" class="me-5"> account</span>
+          <img
+            src="../../../assets/starwars_login.png"
+            style="width: 125px"
+            alt="Star Wars logo"
+          />
+        </div>
+      </div>
 
-    <div class="modal-body text-center fs-5" style="color:rgb(255, 221, 0);">ENTER YOUR EMAIL</div>
-        <input type="email" class="modal-body d-flex flex-row justify-content-center mx-5 p-2">
-    <div class="modal-body text-center fs-5" style="color:rgb(255, 221, 0);">ENTER YOUR PASSWORD</div>
-        <input type="password" class="modal-body d-flex flex-row justify-content-center mx-5 p-2">
+      <!-- *** Reactive Form *** -->
+      <form class="form-group" [formGroup]="loginForm">
+        <label class="modal-body form-label fs-5 yellow"
+          >ENTER YOUR EMAIL ADDRESS</label
+        >
+        <input
+          type="email"
+          class="modal-body form-control"
+          placeholder="Email Address"
+          formControlName="emailForm"
+        />
 
+        <span class="form-text text-danger ms-5" 
+        *ngIf="esValido('emailForm') && submit">
+          * Enter a valid Email
+        </span>
 
+        <label class="modal-body form-label fs-5 mt-2 yellow"
+          >ENTER YOUR PASSWORD</label
+        >
+        <input
+          type="password"
+          class="modal-body form-control"
+          placeholder="Password"
+          formControlName="passForm"
+        />
 
+        <span class="form-text text-danger ms-5" 
+        *ngIf="esValido('passForm') && submit">
+          * Enter a valid password, at least 4 characters
+        </span>
+      </form>
+      <!-- End Form -->
 
-    <div class="modal-footer d-flex flex-row justify-content-center" style="border:none;">
-      <button
-        type="button"
-        class="btn btn-secondary"
-        (click)="loginModal.dismiss()"
-      >
-        Login
-      </button>
+      <div class="modal-footer row mt-4 mx-4 px-4" style="border: none">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="submitLogin()"
+        >
+          Log In
+        </button>
+
+        <div class="text-center mt-4">
+          <div class="small stillAccount">
+            You still don't have an account?
+            <app-signup
+              class="yellow"
+              (click)="loginModal.dismiss()"
+            ></app-signup>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </ng-template>
 
-<p type="button" (click)="loginModal.open(contenido)">Log in</p>
+<p class="logIn" type="button" (click)="loginModal.open(contenido)">LOG IN</p>

@@ -1,0 +1,33 @@
+.logIn:hover {
+    color: #fff;
+}
+.yellow {
+    color:rgb(255, 221, 0);
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    cursor: pointer;
+}
+
+.stillAccount {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+}
+
+
+form label {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     margin-bottom: -0.2em;
+}
+
+form input {
+    max-width: 410px;
+    margin: auto;
+    padding: 0.5em;
+}
