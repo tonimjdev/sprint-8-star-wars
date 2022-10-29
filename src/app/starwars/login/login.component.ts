@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 // Modal bootstrap
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -15,7 +15,7 @@ import { UsersService } from '../services/users.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   submit: boolean = false;
 
   // Formulario reactivo (validators para check email y password)
@@ -43,6 +43,9 @@ export class LoginComponent {
     } else {
       this.usersService.checkLogin(this.loginForm.value.emailForm, 
         this.loginForm.value.passForm);
+        this.loginModal.dismissAll();
     }
+  }
+  ngOnInit(): void {
   }
 }

@@ -47,7 +47,8 @@ export class SignupComponent implements OnInit {
     } else {
     this.usersService.newUser(this.signupForm.value.nameForm, 
       this.signupForm.value.emailForm, 
-      this.signupForm.value.passForm);}
+      this.signupForm.value.passForm);
+      this.signupModal.dismissAll()}
   }
 
   ngOnInit(): void {

@@ -11,7 +11,14 @@ export class UsersService {
   loggedUser: any = "Guest";
 
   // Array usuarios de tipo Users
-  usersArray: Users[] = [];
+  usersArray: Users[] = [
+    {
+      id: 1,
+      userName: "Toni",
+      userEmail: "toni@hola.es",
+      userPass: "1234"
+    }
+  ];
 
   // Método para guardar nuevo usuario
   newUser(userName:string, userEmail:string, userPass:string) {
@@ -19,6 +26,7 @@ export class UsersService {
     let id = this.contadorID+1;
     this.contadorID++;
     this.usersArray.push({ id, userName, userEmail, userPass });
+    alert('Account Created successfully!')
     console.log('Array Users', this.usersArray);
   }
 
@@ -31,6 +39,13 @@ export class UsersService {
     console.log ('loginControl: ', this.loginControl);
     // Logged User
     this.loggedUser = user?.userName;
+  }
+
+  // Método para Logout
+  logout(){
+    this.loginControl = false;
+    this.loggedUser = "Guest";
+    alert('Log Out Successful!')
   }
 
   constructor() { }

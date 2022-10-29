@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// Services
 import { StarshipsService } from '../services/starships.service';
+import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-starships',
@@ -38,15 +40,22 @@ export class StarshipsComponent implements OnInit {
     }
   }
 
-  constructor(private starshipsService: StarshipsService) {
+  constructor(private starshipsService: StarshipsService, private usersService: UsersService) {
     // Inicializamos en 1 cada vez que entramos
     this.actualPage = 1;
   }
 
   ngOnInit(): void {
-    // Reseteamos naves al iniciar
+    // Check Login Control
+    if (!this.usersService.loginControl) {
+      alert ('You must be logged in to access this area!');
+      this.starshipsService.borrarNaves();
+      return;
+    } else {
+       // Reseteamos naves al iniciar
     this.starshipsService.borrarNaves();
     // Cargamos naves
     this.cargarMasNaves();
+    }
   }
 }

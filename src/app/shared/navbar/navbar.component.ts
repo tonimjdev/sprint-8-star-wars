@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { StarshipsService } from '../../starwars/services/starships.service';
 import { UsersService } from '../../starwars/services/users.service';
 
@@ -12,6 +13,11 @@ export class NavbarComponent implements OnInit {
   get userLogged() {
    return this.usersService.loggedUser;
   }
+
+  get loginControl() {
+    return this.usersService.loginControl;
+  }
+
   constructor( private starshipsService: StarshipsService,
                 private usersService: UsersService) { }
 
@@ -20,6 +26,10 @@ export class NavbarComponent implements OnInit {
   listadoNaves() {
     console.log('Antes Servicio')
     this.starshipsService.buscarNaves();
+  }
+
+  logout() {
+    this.usersService.logout();
   }
 
 }
