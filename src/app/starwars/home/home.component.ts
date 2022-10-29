@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor( private usersService: UsersService ) { }
 
   ngOnInit(): void {
-  }
-
+    // Recuperamos datos del Localstorage en el inicio
+    this.usersService.getUserNameLogFromLS('userNameLog');
+    this.usersService.checkLoginControl();
+ }
 }

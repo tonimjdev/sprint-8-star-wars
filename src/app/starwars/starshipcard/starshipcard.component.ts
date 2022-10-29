@@ -25,6 +25,10 @@ export class StarshipcardComponent implements OnInit {
   constructor( private starshipsService: StarshipsService, private usersService: UsersService ) { }
 
   ngOnInit(): void {
+    // Recuperamos datos desde Localstorage
+    this.usersService.checkLoginControl();
+    this.usersService.getUserNameLogFromLS('userNameLog');
+     // Check Login Control
     if (!this.usersService.loginControl) {
       alert ('You must be logged in to access this area!');
       this.starshipsService.borrarNaves();
