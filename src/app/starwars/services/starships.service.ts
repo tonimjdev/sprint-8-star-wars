@@ -1,12 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Pilots } from '../interfaces/pilots.interface';
+
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import {
   StarshipsResponse,
   Starships,
 } from '../interfaces/starships.interface';
+import { Pilots } from '../interfaces/pilots.interface';
+import { Films } from '../interfaces/films.interface';
+
 
 @Injectable({
   providedIn: 'root',
@@ -20,6 +23,9 @@ export class StarshipsService {
 
   public pilots: Pilots[] = [];
   public pilotsControl: boolean = false;
+
+  public films: Films[] = [];
+  public filmsControl: boolean = false;
 
   constructor(private http: HttpClient) {}
 
@@ -87,5 +93,41 @@ export class StarshipsService {
   }
   getIDPilot(i: number) {
     return this.pilots[i].url.replace(/[^0-9]+/g, '');
+  }
+
+
+  // *** FILMS *** //
+  // GET listado películas
+  buscarFilms(idFilm: number) {
+    console.log('Dentro Servicio API películas');
+    this.http
+      .get<Films>(`https://swapi.dev/api/films/${idFilm}`)
+      .subscribe((resp) => {
+        this.films.push(resp);
+        console.log('respuesta API', resp);
+        console.log('array films', this.films);
+      });
+  }
+  // Llamar films de la nave seleccionada
+  llamarFilms(index: number) {
+    this.naveLlamada = this.resultados[index];
+    console.log(
+      'Nave llamada desde servicio llamarFilms: ',
+      this.naveLlamada
+    );
+    console.log('Longiud array films: ', this.naveLlamada.films.length);
+    if (this.naveLlamada.films.length < 1) {
+      this.filmsControl = false;
+      return;
+    } else {
+      this.films = [];
+      for (let i = 0; i < this.naveLlamada.films.length; i++) {
+        this.buscarFilms(this.naveLlamada.films[i].replace(/[^0-9]+/g, ''));
+      }
+      this.filmsControl = true;
+    }
+  }
+  getIDFilm(i: number) {
+    return this.films[i].url.replace(/[^0-9]+/g, '');
   }
 }

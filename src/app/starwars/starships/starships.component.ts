@@ -25,6 +25,7 @@ export class StarshipsComponent implements OnInit {
     this.naveLlamada = this.starshipsService.llamarFicha(index);
     console.log('Nave llamada: ', this.naveLlamada);
     this.starshipsService.llamarPilotos(index);
+    this.starshipsService.llamarFilms(index);
   }
 
   cargarMasNaves() {

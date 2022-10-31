@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { PilotsComponent } from './pilots/pilots.component';
+import { FilmsComponent } from './films/films.component';
 
 
 
@@ -22,7 +23,8 @@ import { PilotsComponent } from './pilots/pilots.component';
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    PilotsComponent
+    PilotsComponent,
+    FilmsComponent
   ],
   imports: [
     CommonModule,
