@@ -43,7 +43,8 @@ export class UsersService {
   }
   // Get loggedUser from Localstorage
   getUserNameLogFromLS(key: string) {
-    this.loggedUser = localStorage.getItem(key);
+    if (localStorage.getItem(key) == undefined) this.loggedUser = 'Guest';
+    else this.loggedUser = localStorage.getItem(key);
   }
   // Check estado login control en Localstorage (Servicio)
   checkLoginControl() {

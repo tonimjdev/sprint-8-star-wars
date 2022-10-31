@@ -1,19 +1,26 @@
-
-<div class="container mt-4 d-flex justify-content-center"
-infiniteScroll [infiniteScrollDistance]="2"  (scrolled)="onScroll()">
-    <div class="row">
-      <div class="col-12" *ngFor="let nave of resultados; let i = index">
-        <div class="card mb-3" (click)="llamarNave(i)" style="cursor: pointer"
-        [routerLink]="['/starships/',resultados[i].name]">
-          <div class="card-body py-4 ps-4">
-            <h5 class="card-title">
-              {{ nave.name | uppercase}}
-            </h5>
-            <p class="card-text">
-              {{ nave.model | titlecase }}
-            </p>
-          </div>
+<div
+  class="container mt-4 d-flex justify-content-center"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  (scrolled)="onScroll()"
+>
+  <div class="row">
+    <div class="col-12" *ngFor="let nave of resultados; let i = index">
+      <div
+        class="card mb-3"
+        (click)="llamarNave(i)"
+        style="cursor: pointer"
+        [routerLink]="['/starships/', resultados[i].name]"
+      >
+        <div class="card-body py-4 ps-4">
+          <h5 class="card-title">
+            {{ nave.name | uppercase }}
+          </h5>
+          <p class="card-text">
+            {{ nave.model | titlecase }}
+          </p>
         </div>
       </div>
     </div>
   </div>
+</div>

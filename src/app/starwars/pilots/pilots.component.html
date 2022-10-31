@@ -1,0 +1,20 @@
+<div *ngIf="pilotsControl" class="container my-5">
+  <div class="title px-4 py-2 mb-4 fs-5">PILOTS</div>
+  <div class="row row-cols-1 row-cols-md-4 mb-3 g-4">
+    <div *ngFor="let pilot of pilots; let i = index">
+      <div class="col">
+        <div class="card h-100 bg-dark">
+          <img
+            src="{{ urlImg }}{{ idPilot(i) }}.jpg"
+            onerror="this.src='https://starwars-visualguide.com/assets/img/big-placeholder.jpg'"
+            alt="Pilot picture"
+            class="card-img-top"
+          />
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ pilot.name | uppercase }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -11,6 +11,7 @@ import { SignupComponent } from './signup/signup.component';
 import { RouterModule } from '@angular/router';
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { PilotsComponent } from './pilots/pilots.component';
 
 
 
@@ -20,7 +21,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     StarshipcardComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    PilotsComponent
   ],
   imports: [
     CommonModule,
