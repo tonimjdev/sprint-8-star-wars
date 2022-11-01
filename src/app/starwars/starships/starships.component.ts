@@ -20,6 +20,10 @@ export class StarshipsComponent implements OnInit {
     return this.starshipsService.resultados;
   }
 
+  get loginControl() {
+    return this.usersService.loginControl;
+  }
+
   llamarNave(index: number) {
     console.log('El index de la nave llamada es: ', index);
     this.naveLlamada = this.starshipsService.llamarFicha(index);

@@ -27,7 +27,7 @@
       </div>
 
       <!-- *** Reactive Form *** -->
-      <form class="form-group" [formGroup]="signupForm">
+      <form class="form-group" [formGroup]="signupForm" (keyup.enter)="submitSignup()">
         <label class="modal-body form-laber fs-3 yellow"
           >CREATE YOUR ACCOUNT</label
         >

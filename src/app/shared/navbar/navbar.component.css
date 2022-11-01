@@ -46,7 +46,9 @@
     cursor: pointer;
     color:rgb(104, 104, 104);
 }
-
+.logout:hover {
+    color: #fff;
+}
 
 ul li.active {
     border-bottom: 1px solid white;

@@ -76,7 +76,7 @@
         <app-signup routerLink="home"></app-signup>
       </div>
       <div *ngIf="loginControl" class="d-flex justify-content-end">
-        <p type="button" (click)="logout()" routerLink="home">LOG OUT</p>
+        <p class="logout" type="button" (click)="logout()" routerLink="home">LOG OUT</p>
       </div>
       <div class="row d-flex justify-content-end mt-3 pt-1 pe-2">
         Welcome, {{ userLogged }}

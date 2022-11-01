@@ -1,15 +1,78 @@
-<div class="container">
-<div class="row my-5 d-flex justify-content-center">
-<img src="../../../assets/star-wars_yellow.png" style="width: 350px" >
-</div>
-<div class="row d-flex justify-content-center">
+<div
+  id="carouselExampleCaptions"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img
+        src="../../../assets/car101.jpg"
+        class="d-block w-100"
+        alt="C-3PO and Padmé Amidala"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <p class="text-carousel fs-5 fade-in">
+          C-3PO served Senator Padmé Amidala, Anakin Skywalker's secret wife, on
+          Coruscant throughout the Clone Wars.
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="10000">
+      <img
+        src="../../../assets/car102.jpg"
+        class="d-block w-100"
+        alt="Luke Skywalker"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <p class="text-carousel fs-5 fade-in">
+          With Han frozen in carbonite and held in Jabba the Hutt’s palace on
+          Tatooine, Luke led a mission to rescue his old friend.
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="10000">
+      <img
+        src="../../../assets/car104.jpg"
+        class="d-block w-100"
+        alt="Chewbacca and Hand Solo"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <p class="text-carousel fs-5 fade-in">
+          After the Battle of Endor, Han became a rebel hero, helping Chewbacca
+          liberate the Wookiee homeworld of Kashyyyk.
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="10000">
+      <img
+        src="../../../assets/car103.jpg"
+        class="d-block w-100"
+        alt="Kylo and Rey fighting"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <p class="text-carousel fs-5 fade-in">
+          Kylo saw Rey as an ally in destroying the past he hated, and exulted
+          when she left Ahch-To to join him aboard the Supremacy.
+        </p>
+      </div>
+    </div>
+  </div>
   <button
-    class="btn btn-outline-danger"
-    routerLink="starships"
-    routerLinkActive="active"
-    style="width: 300px"
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="prev"
   >
-  May the Force be with you
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
   </button>
-</div>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
