@@ -1,7 +1,7 @@
-<div class="container-fluid header" style="background-color: rgb(10, 11, 11)">
-  <div class="row pt-4 mb-4">
-    <!-- RRSS -->
-    <div class="col-3 d-flex justify-content-center">
+<div class="container-fluid" style="background-color: rgb(10, 11, 11)">
+  <div class="oncanv row pt-4 mb-4">
+    <!-- RRSS ICONS -->
+    <div class="col-4 d-flex justify-content-start ps-5">
       <div class="rrss">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -52,34 +52,106 @@
           />
         </svg>
       </div>
-      <span> KIDS </span>
+      <span class="kids"> KIDS </span>
     </div>
+
     <!-- LOGO -->
-    <div class="col-6">
+    <div class="col-4">
       <div class="d-flex justify-content-center">
         <img
           src="../../../assets/star-wars-logo.png"
           alt="logo star wars"
-          style="width: 200px; cursor: pointer"
           routerLink="home"
           routerLinkActive="active"
+          id="logo_col"
         />
       </div>
     </div>
 
     <!-- LOG IN / SIGN UP -->
-    <div class="col-3">
-      <div *ngIf="!loginControl" class="d-flex justify-content-end me-5 pe-5">
+    <div class="col-4 pe-5">
+      <div *ngIf="!loginControl" class="d-flex justify-content-end">
         <app-login routerLink="home"></app-login>
-        <div class="mx-4">//</div>
+        <div class="mx-2">/</div>
         <app-signup routerLink="home"></app-signup>
       </div>
-      <div *ngIf="loginControl" class="d-flex justify-content-end me-5 pe-5">
+      <div *ngIf="loginControl" class="d-flex justify-content-end">
         <p type="button" (click)="logout()" routerLink="home">LOG OUT</p>
       </div>
-      <div class="row d-flex justify-content-end mt-3 pt-1 me-5 pe-5">
+      <div class="row d-flex justify-content-end mt-3 pt-1 pe-2">
         Welcome, {{ userLogged }}
       </div>
+    </div>
+  </div>
+
+  <!-- HEADER RESPONSIVE -->
+
+  <div class="offcanv row py-2">
+    <!-- Menu desplegable-->
+    <div class="col-3 d-flex justify-content-start">
+      <nav class="navbar navbar-dark ms-8">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="borderno navbar-nav mt-4 me-auto">
+              <li
+                class="nav-item"
+                data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show"
+                *ngIf="!loginControl"
+              >
+                <app-login></app-login>
+              </li>
+              <li
+                class="nav-item"
+                data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show"
+                *ngIf="!loginControl"
+              >
+                <app-signup></app-signup>
+              </li>
+              <li
+                class="nav-item"
+                data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show"
+                *ngIf="loginControl"
+              >
+                <p type="button" (click)="logout()" routerLink="home">
+                  LOG OUT
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Logo -->
+    <div class="col-5">
+      <div class="d-flex justify-content-end pt-3">
+        <img
+          src="../../../assets/starwars_row.png"
+          alt="logo star wars"
+          routerLink="home"
+          routerLinkActive="active"
+          id="logo_row"
+        />
+      </div>
+    </div>
+
+    <!-- User -->
+    <div class="col-4 d-flex justify-content-end py-3 pe-4">
+      Welcome, {{ userLogged }}
     </div>
   </div>
 

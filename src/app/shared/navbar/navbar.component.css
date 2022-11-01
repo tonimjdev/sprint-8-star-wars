@@ -1,4 +1,4 @@
-span {
+.kids {
     color: #000;
     font-size: 0.7em;
     font-weight: 800;
@@ -9,7 +9,7 @@ span {
     background-color:rgb(148, 148, 148);
 }
 
-span:hover {
+.kids:hover {
     cursor: pointer;
     background-color: white;
 }
@@ -20,7 +20,7 @@ span:hover {
 }
 
 .rrss svg {
-    margin-right: 1em;
+    margin-right: 0.9em;
 }
 .rrss svg:hover {
     cursor: pointer;
@@ -60,5 +60,41 @@ li:focus, li:hover, li:active{
 .usuario {
     margin-top: -1.5em;
     margin-left: 2em;
+
+}
+
+#logo_col {
+    width: 200px;
+    cursor: pointer;
+}
+
+@media(max-width: 1000px) {
+
+    .rrss svg {
+        margin-right: 0.4em;
+    }
+    .rrss {
+        margin-right: 0.4em;
+    }
+}
+@media(min-width: 768px) {
+    .offcanv {
+        display: none;
+    }
+}
+
+@media(max-width: 768px) {
+    .oncanv {
+        display: none;
+    }
+
+    #logo_row {
+        width: 230px;
+        cursor: pointer;
+    }
+
+    li:hover {
+       border: 0px solid;
+    }
 
 }

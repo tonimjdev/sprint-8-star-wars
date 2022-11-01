@@ -4,8 +4,13 @@
   }
   .card-title {
     font-size: 1.1em;
-    font-weight: 300;
+    font-weight: 400;
   }
+.card-text {
+  font-size: 1em;
+  font-weight: 300;
+}
+
   .card img {
     border-bottom: 2px solid rgb(238, 119, 119);
     border-top-left-radius: 15px;
