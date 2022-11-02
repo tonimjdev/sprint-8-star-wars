@@ -1,3 +1,8 @@
+.contenido {
+  margin-top: 240px;
+}
+
+
 .text-carousel {
   text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1),
     0 0 30px rgba(255, 255, 255, 1), 0 0 40px #ff00de, 0 0 70px #ff00de,
@@ -21,4 +26,35 @@
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+  }
+
+  @media(max-width: 1200px) {
+    .carousel-item:before {
+      box-shadow: inset 5rem 0 10rem rgba(0, 0, 0, 1),
+    inset -5rem 0 10rem rgba(0, 0, 0, 1);
+    }
+  }
+  @media(max-width: 900px) {
+    .carousel-item:before {
+      box-shadow: inset 3rem 0 7rem rgba(0, 0, 0, 1),
+    inset -3rem 0 7rem rgba(0, 0, 0, 1);
+    }
+  }
+  @media(max-width: 700px) {
+    .carousel-item:before {
+      box-shadow: inset 1rem 0 5rem rgba(0, 0, 0, 1),
+    inset -1rem 0 5rem rgba(0, 0, 0, 1);
+    }
+  }
+  @media(max-width: 500px) {
+    .carousel-item:before {
+      box-shadow: inset 0.4rem 0 2rem rgba(0, 0, 0, 1),
+    inset -0.4rem 0 2rem rgba(0, 0, 0, 1);
+    }
+  }
+
+  @media(max-width: 768px) {
+    .contenido {
+      margin-top: 170px;
+    }
   }

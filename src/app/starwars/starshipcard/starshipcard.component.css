@@ -1,3 +1,6 @@
+.contenido {
+  margin-top: 240px;
+}
 .card {
   font-size: 0.8em;
   border-radius: 15px;
@@ -23,5 +26,11 @@
 
     border-bottom-left-radius: 15px;
     border-top-right-radius: 0;
+  }
+}
+
+@media(max-width: 768px) {
+  .contenido {
+    margin-top: 170px;
   }
 }

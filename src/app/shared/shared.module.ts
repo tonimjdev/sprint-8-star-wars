@@ -4,11 +4,13 @@ import { RouterModule } from '@angular/router';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { StarwarsModule } from '../starwars/starwars.module';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { StarwarsModule } from '../starwars/starwars.module';
     
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,37 @@
+p {
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.rrss {
+    border-right: 1px solid rgb(111, 111, 111);
+    margin-right: 1.2em;
+}
+
+.rrss svg {
+    margin-right: 1.5em;
+}
+.rrss svg:hover {
+    cursor: pointer;
+    color: white!important;
+}
+.kids {
+    color: #000;
+    font-size: 0.7em;
+    font-weight: 800;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 0.42em;
+    margin-bottom: auto;
+    padding: 0 0.4em;
+    border-radius: 10px;
+    background-color:rgb(148, 148, 148);
+}
+
+.kids:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+a {
+    color: rgb(164, 164, 164);
+}
