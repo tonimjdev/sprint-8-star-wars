@@ -1,6 +1,13 @@
+
 p {
     font-weight: 400;
     font-size: 0.9em;
+}
+
+.darkvader {
+    background-image: url(../../../assets/darkvader_dark.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .rrss {
@@ -39,7 +46,6 @@ a {
 
 ul {
 list-style: none;
-padding-bottom: 2em;
 }
 
 ul li a {

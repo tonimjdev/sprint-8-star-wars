@@ -1,5 +1,5 @@
 <div class="contenido">
-<div
+<div *ngIf="loginControl"
   class="container mt-4 d-flex justify-content-center"
   infiniteScroll
   [infiniteScrollDistance]="2"
@@ -10,6 +10,7 @@
       <div
         class="card mb-3"
         (click)="llamarNave(i)"
+        (click)="scrollToTop()"
         style="cursor: pointer"
         [routerLink]="['/starships/', resultados[i].name]"
       >
