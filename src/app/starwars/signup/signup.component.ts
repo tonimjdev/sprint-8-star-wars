@@ -15,44 +15,41 @@ import { UsersService } from '../services/users.service';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-
   submit: boolean = false;
 
-
-
- // Formulario reactivo (validators para check nombre, e-mail, password y terms)
+  // Formulario reactivo (validators para check nombre, e-mail, password y terms)
   signupForm: FormGroup = this.fb.group({
-  nameForm: ['', [Validators.required, Validators.minLength(3)]],
-  emailForm: ['', [Validators.required, Validators.email]],
-  passForm: ['', [Validators.required, Validators.minLength(4)]],
-  termsForm: ['', [Validators.requiredTrue]]
-});
+    nameForm: ['', [Validators.required, Validators.minLength(3)]],
+    emailForm: ['', [Validators.required, Validators.email]],
+    passForm: ['', [Validators.required, Validators.minLength(4)]],
+    termsForm: ['', [Validators.requiredTrue]],
+  });
 
-// Mensaje de error en el HTML si no pasa la validación
+  // Mensaje de error en el HTML si no pasa la validación
   esValido(campo: string) {
-  return this.signupForm.controls[campo].errors;
-}
+    return this.signupForm.controls[campo].errors;
+  }
 
-  constructor(public signupModal: NgbModal, 
+  constructor(
+    public signupModal: NgbModal,
     private fb: FormBuilder,
-    private usersService: UsersService) {}
+    private usersService: UsersService
+  ) {}
 
   submitSignup() {
     this.submit = false;
-    if (
-      this.signupForm.status !== 'VALID') 
-      {
+    if (this.signupForm.status !== 'VALID') {
       this.submit = true;
       alert('Please, check the entered data');
     } else {
-    this.usersService.newUser(this.signupForm.value.nameForm, 
-      this.signupForm.value.emailForm, 
-      this.signupForm.value.passForm);
-      this.signupModal.dismissAll()}
+      this.usersService.newUser(
+        this.signupForm.value.nameForm,
+        this.signupForm.value.emailForm,
+        this.signupForm.value.passForm
+      );
+      this.signupModal.dismissAll();
+    }
   }
 
-  ngOnInit(): void {
-    
-  }
-
+  ngOnInit(): void {}
 }

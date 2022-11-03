@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
 
-describe('HomeComponent', () => {
+describe('(2) TEST del componente "HomeComponent"', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
@@ -17,7 +17,7 @@ describe('HomeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Debería crear componente', () => {
     expect(component).toBeTruthy();
   });
 });

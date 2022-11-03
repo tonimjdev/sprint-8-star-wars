@@ -1,8 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-
 import {
   StarshipsResponse,
   Starships,
@@ -94,7 +92,6 @@ export class StarshipsService {
   getIDPilot(i: number) {
     return this.pilots[i].url.replace(/[^0-9]+/g, '');
   }
-
 
   // *** FILMS *** //
   // GET listado películas

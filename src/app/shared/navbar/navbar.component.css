@@ -1,108 +1,104 @@
-
 .kids {
-    color: #000;
-    font-size: 0.7em;
-    font-weight: 800;
-    font-family:Arial, Helvetica, sans-serif;
-    margin-top: 0.35em;
-    margin-bottom: auto;
-    padding: 0.1em 0.5em;
-    border-radius: 10px;
-    background-color:rgb(148, 148, 148);
+  color: #000;
+  font-size: 0.7em;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0.35em;
+  margin-bottom: auto;
+  padding: 0.1em 0.5em;
+  border-radius: 10px;
+  background-color: rgb(148, 148, 148);
 }
 
 .kids:hover {
-    cursor: pointer;
-    background-color: white;
+  cursor: pointer;
+  background-color: white;
 }
 .rrss {
-    margin-bottom: auto;
-    border-right: 1px solid rgb(111, 111, 111);
-    margin-right: 0.8em;
+  margin-bottom: auto;
+  border-right: 1px solid rgb(111, 111, 111);
+  margin-right: 0.8em;
 }
 
 .rrss svg {
-    margin-right: 0.9em;
+  margin-right: 0.9em;
 }
 .rrss svg:hover {
-    cursor: pointer;
-    color: white!important;
+  cursor: pointer;
+  color: white !important;
 }
 a {
-    color: rgb(164, 164, 164);
-    text-decoration: none;
+  color: rgb(164, 164, 164);
+  text-decoration: none;
 }
 .menu {
-    border-top: 1px solid rgb(69, 69, 69);
-    border-bottom: 1px solid rgb(69, 69, 69);
-    
+  border-top: 1px solid rgb(69, 69, 69);
+  border-bottom: 1px solid rgb(69, 69, 69);
 }
 .menu ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .menu ul li {
-    text-decoration: none;
-    border-left: 1px solid rgb(69, 69, 69);
-    border-right: 1px solid rgb(69, 69, 69);
-    padding: 1em 2em;
-    list-style: none;
-    cursor: pointer;
-    color:rgb(104, 104, 104);
+  text-decoration: none;
+  border-left: 1px solid rgb(69, 69, 69);
+  border-right: 1px solid rgb(69, 69, 69);
+  padding: 1em 2em;
+  list-style: none;
+  cursor: pointer;
+  color: rgb(104, 104, 104);
 }
 .logout:hover {
-    color: #fff;
+  color: #fff;
 }
 
 ul li.active {
-    border-bottom: 1px solid white;
-    color: white!important;
+  border-bottom: 1px solid white;
+  color: white !important;
 }
-li:focus, li:hover, li:active{
-    color: white!important;
-    text-decoration: none;
-    border-bottom: 1px solid white;
-  }
+li:focus,
+li:hover,
+li:active {
+  color: white !important;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
 .usuario {
-    margin-top: -1.5em;
-    margin-left: 2em;
-
+  margin-top: -1.5em;
+  margin-left: 2em;
 }
 
 #logo_col {
-    width: 200px;
+  width: 200px;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .rrss svg {
+    margin-right: 0.4em;
+  }
+  .rrss {
+    margin-right: 0.4em;
+  }
+}
+@media (min-width: 768px) {
+  .offcanv {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .oncanv {
+    display: none;
+  }
+
+  #logo_row {
+    width: 230px;
     cursor: pointer;
-}
+  }
 
-@media(max-width: 1000px) {
-
-    .rrss svg {
-        margin-right: 0.4em;
-    }
-    .rrss {
-        margin-right: 0.4em;
-    }
-}
-@media(min-width: 768px) {
-    .offcanv {
-        display: none;
-    }
-}
-
-@media(max-width: 768px) {
-    .oncanv {
-        display: none;
-    }
-
-    #logo_row {
-        width: 230px;
-        cursor: pointer;
-    }
-
-    li:hover {
-       border: 0px solid;
-    }
-
+  li:hover {
+    border: 0px solid;
+  }
 }

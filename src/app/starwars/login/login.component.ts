@@ -5,7 +5,6 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 // Forms
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ThisReceiver } from '@angular/compiler';
 
 // Services
 import { UsersService } from '../services/users.service';
@@ -29,23 +28,25 @@ export class LoginComponent implements OnInit {
     return this.loginForm.controls[campo].errors;
   }
 
-  constructor(public loginModal: NgbModal, private fb: FormBuilder,
-    private usersService: UsersService) {}
+  constructor(
+    public loginModal: NgbModal,
+    private fb: FormBuilder,
+    private usersService: UsersService
+  ) {}
 
   // Check Login -> Service
   submitLogin() {
     this.submit = false;
-    if (
-      this.loginForm.status !== 'VALID'
-    ) {
+    if (this.loginForm.status !== 'VALID') {
       this.submit = true;
       alert('Please, check the entered data');
     } else {
-      this.usersService.checkLogin(this.loginForm.value.emailForm, 
-        this.loginForm.value.passForm);
-        this.loginModal.dismissAll();
+      this.usersService.checkLogin(
+        this.loginForm.value.emailForm,
+        this.loginForm.value.passForm
+      );
+      this.loginModal.dismissAll();
     }
   }
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }

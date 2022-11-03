@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 
 import { Users } from '../interfaces/users.interface';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class UsersService {
   // Variables
   contadorID: number = 0;

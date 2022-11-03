@@ -1,22 +1,21 @@
 <div *ngIf="filmsControl" class="container my-5">
-    <div class="title px-4 py-2 mb-4 fs-5">FILMS</div>
-    <div class="row row-cols-1 row-cols-md-4 mb-3 g-4">
-        <div *ngFor="let film of films; let i = index">
-            <div class="col">
-              <div class="card h-100 bg-dark">
-                <img
-                  src="{{ urlImg }}{{ idFilm(i) }}.jpg"
-                  onerror="this.src='https://starwars-visualguide.com/assets/img/big-placeholder.jpg'"
-                  alt="Film picture"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title text-center">{{ film.title | uppercase }}</h5>
-                  <p class="card-text text-center">Episode {{ film.episode_id }}</p>
-                </div>
-              </div>
-            </div>
+  <div class="title px-4 py-2 mb-4 fs-5">FILMS</div>
+  <div class="row row-cols-1 row-cols-md-4 mb-3 g-4">
+    <div *ngFor="let film of films; let i = index">
+      <div class="col">
+        <div class="card h-100 bg-dark">
+          <img
+            src="{{ urlImg }}{{ idFilm(i) }}.jpg"
+            onerror="this.src='https://starwars-visualguide.com/assets/img/big-placeholder.jpg'"
+            alt="Film picture"
+            class="card-img-top"
+          />
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ film.title | uppercase }}</h5>
+            <p class="card-text text-center">Episode {{ film.episode_id }}</p>
           </div>
-    
+        </div>
+      </div>
     </div>
+  </div>
 </div>

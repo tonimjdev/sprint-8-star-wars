@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { PilotsComponent } from './pilots/pilots.component';
 import { FilmsComponent } from './films/films.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -24,14 +24,15 @@ import { FilmsComponent } from './films/films.component';
     LoginComponent,
     SignupComponent,
     PilotsComponent,
-    FilmsComponent
+    FilmsComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
     InfiniteScrollModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports: [
     StarshipsComponent,
@@ -39,7 +40,7 @@ import { FilmsComponent } from './films/films.component';
     HomeComponent,
     InfiniteScrollModule,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
   ]
 })
 export class StarwarsModule { }

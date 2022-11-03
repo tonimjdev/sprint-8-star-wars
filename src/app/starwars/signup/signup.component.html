@@ -27,7 +27,11 @@
       </div>
 
       <!-- *** Reactive Form *** -->
-      <form class="form-group" [formGroup]="signupForm" (keyup.enter)="submitSignup()">
+      <form
+        class="form-group"
+        [formGroup]="signupForm"
+        (keyup.enter)="submitSignup()"
+      >
         <label class="modal-body form-laber fs-3 yellow"
           >CREATE YOUR ACCOUNT</label
         >
@@ -37,9 +41,11 @@
           placeholder="Your Name"
           formControlName="nameForm"
         />
-      
-        <span class="form-text text-danger ms-5" 
-        *ngIf="esValido('nameForm') && submit">
+
+        <span
+          class="form-text text-danger ms-5"
+          *ngIf="esValido('nameForm') && submit"
+        >
           * Required field, at least 3 characters
         </span>
         <input
@@ -48,9 +54,11 @@
           placeholder="Email Address"
           formControlName="emailForm"
         />
-   
-        <span class="form-text text-danger ms-5" 
-        *ngIf="esValido('emailForm') && submit">
+
+        <span
+          class="form-text text-danger ms-5"
+          *ngIf="esValido('emailForm') && submit"
+        >
           * Required field, enter a valid Email
         </span>
 
@@ -61,12 +69,13 @@
           formControlName="passForm"
         />
 
-        <span class="form-text text-danger ms-5" 
-        *ngIf="esValido('passForm') && submit">
+        <span
+          class="form-text text-danger ms-5"
+          *ngIf="esValido('passForm') && submit"
+        >
           * Required field, at least 4 characters
         </span>
 
-        
         <div class="terms modal-body row pb-2">
           <input
             type="checkbox"
@@ -78,10 +87,10 @@
             <span class="yellow">Terms of Use</span>, and acknowledge that you
             have read our <span class="yellow">Privacy Policy</span>,
             <span class="yellow">Cookies Policy</span> and
-            <span class="yellow">UK & EU Privacy Rights</span>.</p
-          >
+            <span class="yellow">UK & EU Privacy Rights</span>.
+          </p>
         </div>
-     
+
         <span
           class="errorTerms form-text text-danger"
           *ngIf="esValido('termsForm') && submit"

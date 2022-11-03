@@ -1,54 +1,54 @@
-
 <div *ngIf="loginControl" class="contenido">
   <div class="container my-5">
-  <div class="title px-4 py-2 mb-4 fs-5">STARSHIP</div>
-<div class="d-flex justify-content-center">
- 
+    <div class="title px-4 py-2 mb-4 fs-5">STARSHIP</div>
+    <div class="d-flex justify-content-center">
       <div class="card bg-dark" style="max-width: 1400px">
         <div class="row g-0">
           <div class="col-lg-5">
-        <img
-          src="{{ urlImg }}{{ idNave }}.jpg"
-          onerror="this.src='https://starwars-visualguide.com/assets/img/big-placeholder.jpg'"
-          alt="Starship picture"
-            class="img-fluid"
-        />
-      </div>
-      <div class="col-lg-7">
-        <div class="card-body">
-          <h5 class="card-title">{{ fichaNave.name | uppercase }}</h5>
-          <p class="card-text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-            voluptatem repellat vero recusandae perspiciatis libero voluptas,
-            fuga consectetur dolor!
-          </p>
-   <div class="row">
-<div class="col-md-6">
-            <p class="card-text">Model: {{ fichaNave.model }}</p>
-            <p class="card-text">
-              Cost in credits:
-              {{
-                fichaNave.cost_in_credits !== "unknown"
-                  ? (fichaNave.cost_in_credits | number)
-                  : (fichaNave.cost_in_credits | lowercase)
-              }}
-            </p>
-            <p class="card-text">
-              Atmospheric Speed: {{ fichaNave.max_atmosphering_speed }}
-            </p>
+            <img
+              src="{{ urlImg }}{{ idNave }}.jpg"
+              onerror="this.src='https://starwars-visualguide.com/assets/img/big-placeholder.jpg'"
+              alt="Starship picture"
+              class="img-fluid"
+            />
           </div>
-          <div class="col-md-6">
-            <p class="card-text">Manufacturer: {{ fichaNave.manufacturer }}</p>
-            <p class="card-text">Length: {{ fichaNave.length }}</p>
-            <p class="card-text">Crew: {{ fichaNave.crew }}</p>
-   
+          <div class="col-lg-7">
+            <div class="card-body">
+              <h5 class="card-title">{{ fichaNave.name | uppercase }}</h5>
+              <p class="card-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+                voluptatem repellat vero recusandae perspiciatis libero
+                voluptas, fuga consectetur dolor!
+              </p>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="card-text">Model: {{ fichaNave.model }}</p>
+                  <p class="card-text">
+                    Cost in credits:
+                    {{
+                      fichaNave.cost_in_credits !== "unknown"
+                        ? (fichaNave.cost_in_credits | number)
+                        : (fichaNave.cost_in_credits | lowercase)
+                    }}
+                  </p>
+                  <p class="card-text">
+                    Atmospheric Speed: {{ fichaNave.max_atmosphering_speed }}
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p class="card-text">
+                    Manufacturer: {{ fichaNave.manufacturer }}
+                  </p>
+                  <p class="card-text">Length: {{ fichaNave.length }}</p>
+                  <p class="card-text">Crew: {{ fichaNave.crew }}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <app-pilots></app-pilots>
+  <app-films></app-films>
 </div>
-</div>
-</div>
-<app-pilots></app-pilots>
-<app-films></app-films>

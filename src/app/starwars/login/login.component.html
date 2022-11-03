@@ -27,7 +27,11 @@
       </div>
 
       <!-- *** Reactive Form *** -->
-      <form class="form-group" [formGroup]="loginForm" (keyup.enter)="submitLogin()">
+      <form
+        class="form-group"
+        [formGroup]="loginForm"
+        (keyup.enter)="submitLogin()"
+      >
         <label class="modal-body form-label fs-5 yellow"
           >ENTER YOUR EMAIL ADDRESS</label
         >
@@ -38,8 +42,10 @@
           formControlName="emailForm"
         />
 
-        <span class="form-text text-danger ms-5" 
-        *ngIf="esValido('emailForm') && submit">
+        <span
+          class="form-text text-danger ms-5"
+          *ngIf="esValido('emailForm') && submit"
+        >
           * Enter a valid Email
         </span>
 
@@ -53,19 +59,17 @@
           formControlName="passForm"
         />
 
-        <span class="form-text text-danger ms-5" 
-        *ngIf="esValido('passForm') && submit">
+        <span
+          class="form-text text-danger ms-5"
+          *ngIf="esValido('passForm') && submit"
+        >
           * Enter a valid password, at least 4 characters
         </span>
       </form>
       <!-- End Form -->
 
       <div class="modal-footer row mt-4 mx-4 px-4" style="border: none">
-        <button
-          type="button"
-          class="btn btn-secondary"
-          (click)="submitLogin()"
-        >
+        <button type="button" class="btn btn-secondary" (click)="submitLogin()">
           Log In
         </button>
 

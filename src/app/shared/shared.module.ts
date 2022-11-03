@@ -15,9 +15,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     CommonModule,
     RouterModule,
-    StarwarsModule
-   
-    
+    StarwarsModule  
   ],
   exports: [
     NavbarComponent,

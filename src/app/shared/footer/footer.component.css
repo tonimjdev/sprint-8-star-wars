@@ -1,65 +1,64 @@
-
 p {
-    font-weight: 400;
-    font-size: 0.9em;
+  font-weight: 400;
+  font-size: 0.9em;
 }
 
 .darkvader {
-    background-image: url(../../../assets/darkvader_dark.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+  background-image: url(../../../assets/darkvader_dark.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .rrss {
-    border-right: 1px solid rgb(111, 111, 111);
-    margin-right: 1.2em;
+  border-right: 1px solid rgb(111, 111, 111);
+  margin-right: 1.2em;
 }
 
 .rrss svg {
-    margin-right: 1.5em;
+  margin-right: 1.5em;
 }
 .rrss svg:hover {
-    cursor: pointer;
-    color: white!important;
+  cursor: pointer;
+  color: white !important;
 }
 .kids {
-    color: #000;
-    font-size: 0.7em;
-    font-weight: 800;
-    font-family:Arial, Helvetica, sans-serif;
-    margin-top: 0.42em;
-    margin-bottom: auto;
-    padding: 0.2em 0.5em;
-    border-radius: 10px;
-    background-color:rgb(148, 148, 148);
+  color: #000;
+  font-size: 0.7em;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0.42em;
+  margin-bottom: auto;
+  padding: 0.2em 0.5em;
+  border-radius: 10px;
+  background-color: rgb(148, 148, 148);
 }
 
 .kids:hover {
-    cursor: pointer;
-    background-color: white;
+  cursor: pointer;
+  background-color: white;
 }
 
 a {
-    color: rgb(164, 164, 164);
-    text-decoration: none;
+  color: rgb(164, 164, 164);
+  text-decoration: none;
 }
 
 ul {
-list-style: none;
+  list-style: none;
 }
 
 ul li a {
-    text-decoration: none;
-    font-size: 0.8em;
-    font-weight: 400;
-    border-right: 1px solid rgb(111, 111, 111);
-    padding-right: 0.8em;
-    margin-left: -1em;
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: 400;
+  border-right: 1px solid rgb(111, 111, 111);
+  padding-right: 0.8em;
+  margin-left: -1em;
 }
 .no-line {
-    border:none!important;
+  border: none !important;
 }
 
 ul li a:hover {
-    color: #fff;
+  color: #fff;
 }

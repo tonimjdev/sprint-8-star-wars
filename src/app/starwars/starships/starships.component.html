@@ -1,42 +1,44 @@
 <div class="contenido">
-<div *ngIf="loginControl"
-  class="container mt-4 d-flex justify-content-center"
-  infiniteScroll
-  [infiniteScrollDistance]="2"
-  (scrolled)="onScroll()"
->
-  <div class="row">
-    <div class="col-12" *ngFor="let nave of resultados; let i = index">
-      <div
-        class="card mb-3"
-        (click)="llamarNave(i)"
-        (click)="scrollToTop()"
-        style="cursor: pointer"
-        [routerLink]="['/starships/', resultados[i].name]"
-      >
-        <div class="card-body py-4 ps-4">
-          <h5 class="card-title">
-            {{ nave.name | uppercase }}
-          </h5>
-          <p class="card-text">
-            {{ nave.model | titlecase }}
-          </p>
+  <div
+    *ngIf="loginControl"
+    class="container mt-4 d-flex justify-content-center"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    (scrolled)="onScroll()"
+  >
+    <div class="row">
+      <div class="col-12" *ngFor="let nave of resultados; let i = index">
+        <div
+          class="card mb-3"
+          (click)="llamarNave(i)"
+          (click)="scrollToTop()"
+          style="cursor: pointer"
+          [routerLink]="['/starships/', resultados[i].name]"
+        >
+          <div class="card-body py-4 ps-4">
+            <h5 class="card-title">
+              {{ nave.name | uppercase }}
+            </h5>
+            <p class="card-text">
+              {{ nave.model | titlecase }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container" *ngIf="!loginControl">
-  <div class="row my-5 pt-5 d-flex justify-content-center">
-    <img src="../../../assets/star-wars_yellow.png" style="width: 350px" />
-  </div>
-  <div class="row d-flex justify-content-center">
-    <div class="col-12">
-      <div class="d-flex justify-content-center fs-3 mb-5 pb-5">
-    <span class="me-2">PLEASE, </span> <app-login routerLink="../home"></app-login>
-  </div>
-  </div>
-</div>
+  <div class="container" *ngIf="!loginControl">
+    <div class="row my-5 pt-5 d-flex justify-content-center">
+      <img src="../../../assets/star-wars_yellow.png" style="width: 350px" />
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-12">
+        <div class="d-flex justify-content-center fs-3 mb-5 pb-5">
+          <span class="me-2">PLEASE, </span>
+          <app-login routerLink="../home"></app-login>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

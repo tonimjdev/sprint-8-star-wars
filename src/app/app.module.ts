@@ -11,7 +11,6 @@ import { StarwarsModule } from './starwars/starwars.module';
 import { UsersService } from './starwars/services/users.service';
 
 
-
 @NgModule({
   declarations: [
     AppComponent

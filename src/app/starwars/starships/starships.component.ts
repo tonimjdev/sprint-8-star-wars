@@ -46,8 +46,8 @@ export class StarshipsComponent implements OnInit {
     }
   }
 
-  scrollToTop(){
-    window.scroll(0,0);
+  scrollToTop() {
+    window.scroll(0, 0);
   }
 
   constructor(

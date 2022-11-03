@@ -1,17 +1,17 @@
 .contenido {
-    margin-top: 240px;
-  }
-
-.card {
-    border: none;
-    background-color: rgb(29, 29, 29);
-    color:rgb(163, 163, 163);
-    font-weight: 300;
-    max-width: 600px;
-    margin: auto;
+  margin-top: 240px;
 }
 
-@media(max-width: 768px) {
+.card {
+  border: none;
+  background-color: rgb(29, 29, 29);
+  color: rgb(163, 163, 163);
+  font-weight: 300;
+  max-width: 600px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
   .contenido {
     margin-top: 170px;
   }
